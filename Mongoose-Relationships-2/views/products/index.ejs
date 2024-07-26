@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL Products</title>
+</head>
+<body>
+    <h1><%= category %> Products</h1>
+        <% for(let i=0;i<products.length;i++){ %>
+            <a href="/products/<%= products[i]._id %>"><%= products[i].name %></a>
+            <ul>
+                <li>Price- <%= products[i].price %></li>
+                <li>Category- <%= products[i].category %></li>
+            </ul>
+        <% } %>
+    <h2><a href="/products/new">Add a new Product</a></h2>
+    <% if(category!='All'){ %>
+        <h2><a href="/products">View All products</a></h2>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL Farms</title>
+</head>
+<body>
+    <h1>All Farms</h1>
+        <% for(let i=0;i<farms.length;i++){ %>
+            <a href="/farms/<%= farms[i]._id %>"><%= farms[i].name %></a>
+            <ul>
+                <li>City- <%= farms[i].city %></li>
+                <li>Email- <%= farms[i].email %></li>
+            </ul>
+        <% } %>
+    <h2><a href="/farms/new">Create a new Farm</a></h2>
+</body>
+</html>
