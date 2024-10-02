@@ -1,0 +1,23 @@
+<nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-white text-lg font-bold">
+            MyLogo
+        </div>
+        <div class="hidden md:flex space-x-4">
+            <% if(user) {%>
+                <a href="#" class="text-white hover:bg-gray-700 px-3 py-2 rounded"><%= user.name %></a>
+                <a href="/logout" class="text-white hover:bg-gray-700 px-3 py-2 rounded">Logout</a>
+            <% } else {%>
+            <a href="/register" class="text-white hover:bg-gray-700 px-3 py-2 rounded">Signup</a>
+            <a href="/login" class="text-white hover:bg-gray-700 px-3 py-2 rounded">Login</a>
+            <% } %>
+        </div>
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
